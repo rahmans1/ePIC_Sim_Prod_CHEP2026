@@ -154,10 +154,9 @@ section.small {
 
 # Scaling ePIC Simulation Production:<br><span class="nowrap" style="font-size:30px;">Distributed Workflow and Data Management</span>
 
-<p style="color:#2f6f8f;">Sakib Rahman<br>
-<span class="nowrap">Nuclear and Particle Physics Software (NPPS)</span><br>
-<span class="nowrap">Brookhaven National Laboratory</span><br>
-<span class="nowrap">On behalf of the ePIC Collaboration</span></p>
+<p style="color:#2f6f8f;font-size:28px;">Sakib Rahman<br>
+<span class="nowrap" style="font-size:20px;">on behalf of the ePIC Collaboration</span><br>
+<span class="nowrap" style="font-size:20px;">Brookhaven National Laboratory</span></p>
 
 <p style="color:#5f6b7a;"><span class="nowrap">Computing in High Energy and Nuclear Physics (CHEP)</span><br>
 <span class="nowrap">Chulalongkorn University, Bangkok, Thailand</span><br>
@@ -213,7 +212,12 @@ section.small {
 
 <div class="grid-2" style="margin-bottom:10px;">
 <div style="font-size:22px;">
-The Production WG sits within the <strong>Software & Computing</strong> branch of the ePIC collaboration, running large-scale monthly simulation campaigns on the Open Science Grid (OSG) and allocated HPC/HTC resources to support detector and physics studies for the Technical Design Report — continuously since <strong>May 2023</strong>, growing to <strong>&gt;1M core hours</strong> and <strong>~150 TB</strong> per month.
+<ul style="margin:0;padding-left:22px;">
+<li>Sits within the <strong>Software &amp; Computing</strong> branch of the ePIC collaboration</li>
+<li>Runs large-scale monthly simulation campaigns on HTC and HPC resources — opportunistic sites via the Open Science Grid (OSG) and allocated domestic &amp; international sites</li>
+<li>Supports detector and physics studies for the Technical Design Report</li>
+<li>Campaigns running continuously since <strong>May 2023</strong>, growing to <strong>&gt;1M core hours</strong> and <strong>~150 TB</strong> per month</li>
+</ul>
 </div>
 <div>
 <table class="orgchart">
@@ -233,7 +237,7 @@ The Production WG sits within the <strong>Software & Computing</strong> branch o
 </div>
 
 <div class="resp-boxes">
-  <div class="resp-box"><strong>Campaigns</strong>Coordinate simulation campaigns across OSG and HPC/HTC resources</div>
+  <div class="resp-box"><strong>Campaigns</strong>Coordinate simulation campaigns on the OSG opportunistically and other allocated resources</div>
   <div class="resp-box"><strong>Infrastructure</strong>Develop and maintain workflow and data management systems</div>
   <div class="resp-box"><strong>Support</strong>Deliver production-scale samples to Physics Working Groups (PWG) and Detector Subsystem Collaborations (DSC)</div>
 </div>
