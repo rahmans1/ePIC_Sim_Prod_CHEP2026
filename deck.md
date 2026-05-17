@@ -142,6 +142,8 @@ section.small {
 
 <!-- _class: title -->
 
+<p style="position:absolute;bottom:14px;left:46px;font-size:13px;color:#a0aab4;margin:0;">Slide template generated with Claude Sonnet 4.6</p>
+
 <div class="title-top">
   <img src="assets/epic_logo.png" alt="ePIC logo">
   <img src="assets/bnl_logo.png" alt="Brookhaven National Laboratory logo">
@@ -179,17 +181,27 @@ section.small {
   <div class="stat"><div class="value">25</div><div>Countries</div></div>
 </div>
 
-<div class="grid-2" style="align-items:end;">
-<div style="display:flex;flex-direction:column;">
-<p style="font-size:20px;">The ePIC experiment will be the first detector at the future Electron-Ion Collider, with data taking planned for the early 2030s. It is being realized through a host-lab partnership between Brookhaven National Laboratory (BNL) and Jefferson Lab (JLab) to support precision studies of nucleons and nuclei at the scale of sea quarks and gluons.</p>
-<div class="figure">
-  <img src="assets/image4.jpg" alt="EIC beam specifications">
+<div class="grid-2" style="align-items:stretch;">
+<div style="display:flex;flex-direction:column;gap:7px;">
+<div style="background:#eef4fb;border-left:5px solid #1E5BA8;border-radius:4px;padding:8px 12px;font-size:18px;">
+ePIC will be the first detector at the future Electron-Ion Collider — data taking planned for the <strong>early 2030s</strong>
+</div>
+<div style="background:#f0f5f9;border-left:5px solid #2f6f8f;border-radius:4px;padding:8px 12px;font-size:18px;">
+Being realized through a partnership between host labs: <strong>Brookhaven National Laboratory (BNL)</strong> and <strong>Jefferson Lab (JLab)</strong>
+</div>
+<div style="flex-grow:1;display:flex;flex-direction:column;justify-content:flex-end;text-align:center;margin-top:7px;">
+  <img src="assets/image4.jpg" alt="EIC beam specifications" style="width:100%;object-fit:contain;flex-grow:1;">
   <p class="muted" style="font-size:24px;margin-top:4px;font-weight:bold;">EIC Beam Specifications</p>
 </div>
 </div>
-<div class="figure" style="margin-top:-12px;">
-  <img src="assets/image5.png" alt="ePIC collaboration map" style="max-height:510px;">
+<div style="display:flex;flex-direction:column;gap:7px;">
+<div style="background:#eaf4ea;border-left:5px solid #1E8449;border-radius:4px;padding:8px 12px;font-size:18px;min-height:82px;display:flex;align-items:center;">
+Will enable precision studies of nucleons and nuclei at the scale of sea quarks and gluons
+</div>
+<div style="flex-grow:1;display:flex;flex-direction:column;justify-content:flex-end;text-align:center;margin-top:7px;">
+  <img src="assets/image5.png" alt="ePIC collaboration map" style="width:100%;object-fit:contain;flex-grow:1;">
   <p class="muted" style="font-size:24px;margin-top:4px;font-weight:bold;">ePIC: A Global Collaboration</p>
+</div>
 </div>
 </div>
 
