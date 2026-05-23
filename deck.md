@@ -718,7 +718,7 @@ Background mixed events are highly relevant to streaming reconstruction algorith
 
 - PanDA WMS / iDDS enables automated production workflows and job brokerage
 - Rucio enables distributed data management, replication, and user data access
-- PCS maps user requests from Physics Working Groups to production tasks
+- PCS maps user requests from PWGs and DSCs to production tasks
 
 ### Payload Optimizations
 
