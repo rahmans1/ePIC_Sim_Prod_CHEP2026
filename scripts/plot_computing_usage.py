@@ -34,13 +34,13 @@ DATA = {
 
 # ── Colors ────────────────────────────────────────────────────────────────────
 COLORS = {
-    'OSG Opportunistic': '#1E5BA8',
-    'JLab':              '#C0392B',
-    'Digital Research Alliance Canada': '#1E8449',
-    'INFN-T1':           '#8E44AD',
-    'Perlmutter':        '#D35400',
-    'BNL SCDF':          '#148F77',
-    'HPCC (UManitoba)':  '#626567',
+    'OSG Opportunistic': '#0072B2',
+    'JLab':              '#D55E00',
+    'Digital Research Alliance Canada': '#009E73',
+    'INFN-T1':           '#CC79A7',
+    'Perlmutter':        '#E69F00',
+    'BNL SCDF':          '#56B4E9',
+    'HPCC (UManitoba)':  '#F0E442',
 }
 
 
