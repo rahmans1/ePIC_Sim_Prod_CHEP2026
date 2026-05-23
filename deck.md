@@ -435,8 +435,6 @@ Production orchestration will be consolidated around **BNL PanDA/iDDS** and **JL
 
 ## Rucio for Data Management
 
-<img src="assets/rucio.png" alt="Rucio logo" style="position:absolute;top:18px;right:56px;height:64px;object-fit:contain;">
-
 <div class="grid-2" style="gap:20px;margin-bottom:10px;align-items:stretch;">
 <div style="display:flex;flex-direction:column;gap:10px;">
 
@@ -444,32 +442,17 @@ Production orchestration will be consolidated around **BNL PanDA/iDDS** and **JL
 <strong style="color:#1E5BA8;font-size:21px;">Current State</strong><br>
 <ul style="margin:6px 0 0 0;padding-left:18px;">
 <li>Server at JLab in production since Jan 2025</li>
-<li>File &amp; dataset-level DIDs</li>
+<li>File &amp; dataset-level Data Identifiers</li>
 <li>FTS transfers via subscription rules</li>
 <li>X.509 auth for uploads; token-based auth with <strong>CILogon</strong> being developed</li>
 </ul>
 </div>
 
-<div style="background:#eaf4ea;border-left:5px solid #1E8449;border-radius:4px;padding:12px 14px;font-size:19px;flex-grow:1;">
-<strong style="color:#1E8449;font-size:21px;">Rucio Concepts</strong>
-<table style="width:100%;border-collapse:collapse;margin-top:6px;font-size:18px;">
-<tr style="background:#c8e6c9;"><th style="padding:6px 8px;text-align:left;">Term</th><th style="padding:6px 8px;text-align:left;">Meaning</th></tr>
-<tr><td style="padding:5px 8px;"><strong>DID</strong></td><td style="padding:5px 8px;">Data Identifier — <code>scope:name</code> for any object</td></tr>
-<tr style="background:#f0faf0;"><td style="padding:5px 8px;"><strong>Scope</strong></td><td style="padding:5px 8px;">Namespace prefix, e.g. <code>epic</code></td></tr>
-<tr><td style="padding:5px 8px;"><strong>File</strong></td><td style="padding:5px 8px;">Atomic unit with checksum &amp; size</td></tr>
-<tr style="background:#f0faf0;"><td style="padding:5px 8px;"><strong>Dataset</strong></td><td style="padding:5px 8px;">Ordered collection of files</td></tr>
-<tr><td style="padding:5px 8px;"><strong>Container</strong></td><td style="padding:5px 8px;">Collection of datasets or containers</td></tr>
-</table>
-</div>
-
-</div>
-<div style="display:flex;flex-direction:column;gap:10px;">
-
-<div style="background:#fdf6e3;border-left:5px solid #b07d00;border-radius:4px;padding:12px 14px;font-size:19px;">
+<div style="background:#fdf6e3;border-left:5px solid #b07d00;border-radius:4px;padding:12px 14px;font-size:19px;flex-grow:1;">
 <strong style="color:#b07d00;font-size:21px;">Naming Convention</strong><br>
 <code style="font-size:15px;">epic:/dataLevel/path/to/dataset/file</code><br>
 <code style="font-size:15px;">protocol://host:port/prefix/dataLevel/...</code>
-<div style="margin-top:8px;font-size:16px;"><strong>Strategy:</strong> full filesystem path reflected in DID for human readability</div>
+<div style="margin-top:8px;font-size:16px;"><strong>Strategy:</strong> full filesystem path reflected in Data Identifier for human readability</div>
 <div style="margin-top:4px;font-size:16px;color:#b07d00;"><strong>Limitations:</strong>
 <ul style="margin:4px 0 0 0;padding-left:18px;">
 <li>Rucio character limits constrain deeply nested paths</li>
@@ -478,25 +461,30 @@ Production orchestration will be consolidated around **BNL PanDA/iDDS** and **JL
 </div>
 </div>
 
-<div style="background:#eaf4ea;border-left:5px solid #1E8449;border-radius:4px;padding:12px 14px;font-size:19px;flex-grow:1;">
-<strong style="color:#1E8449;font-size:21px;">Rucio Metadata Rollout</strong><br>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;">
+
+<div style="background:#eaf4ea;border-left:5px solid #1E8449;border-radius:4px;padding:12px 14px;font-size:19px;flex-grow:1;display:flex;flex-direction:column;">
+<strong style="color:#1E8449;font-size:21px;">Rucio Metadata Rollout</strong>
 <ul style="margin:6px 0 0 0;padding-left:18px;">
 <li>Data made <strong>Findable</strong> and <strong>Accessible</strong> under <strong>FAIR data principles</strong>
   <ul style="margin:4px 0 0 0;padding-left:18px;">
-  <li>Metadata tags (energy, EvGen, PWG, detector geometry, …) for precise discovery and filtering</li>
+  <li>Metadata tags (energy, event generator, physics working group, detector geometry, etc.) for precise discovery and filtering</li>
   <li>Rucio CLI available inside the <a href="https://github.com/eic/containers" style="color:#1E8449;text-decoration:underline;">eic-shell</a> container</li>
   </ul>
 </li>
 <li>Rucio tools introduced to collaboration via user learning &amp; training efforts <span class="muted" style="font-size:0.85em;">(<a href="https://indico.cern.ch/event/1471803/contributions/6968308/" style="color:#5f6b7a;text-decoration:underline;">See Alexandr Prozorov's talk</a>)</span></li>
 </ul>
+<ul style="margin:6px 0 0 0;padding-left:18px;font-size:19px;">
+<li>Further reading: <a href="https://indico.cern.ch/event/1545309/contributions/6733613/attachments/3168793/5632824/Rucio_workshop_v5.pdf" style="color:#1E8449;text-decoration:underline;">Rucio for ePIC — Rucio Workshop 2025</a></li>
+<li>Tutorial: <a href="https://eic.github.io/tutorial-file-access/" style="color:#1E8449;text-decoration:underline;">EIC File Access</a></li>
+</ul>
+<div style="flex-grow:1;display:flex;align-items:center;justify-content:center;margin-top:10px;">
+  <img src="assets/rucio.png" alt="Rucio logo" style="max-height:100px;max-width:100%;object-fit:contain;">
+</div>
 </div>
 
 </div>
-</div>
-
-<div style="display:flex;justify-content:space-between;margin-top:4px;">
-<p class="muted" style="font-size:15px;margin:0;">Further reading: <a href="https://indico.cern.ch/event/1545309/contributions/6733613/attachments/3168793/5632824/Rucio_workshop_v5.pdf" style="color:#2f6f8f;text-decoration:underline;">Rucio for ePIC — Rucio Workshop 2025</a></p>
-<p class="muted" style="font-size:15px;margin:0;">Tutorial: <a href="https://eic.github.io/tutorial-file-access/" style="color:#2f6f8f;text-decoration:underline;">EIC File Access</a></p>
 </div>
 
 ---
@@ -511,7 +499,7 @@ Production orchestration will be consolidated around **BNL PanDA/iDDS** and **JL
 <div style="background:#eef4fb;border-left:4px solid #1E5BA8;border-radius:4px;padding:6px 10px;flex:1;">
 <strong style="color:#1E5BA8;font-size:19px;">Production Systems</strong><br>
 <a href="https://github.com/BNLnpps/SWF-monitor" style="color:#2f6f8f;text-decoration:underline;"><code>SWF-monitor</code></a> — PanDA jobs/tasks/queues, PCS tags, error summaries<br>
-<a href="https://github.com/eic/rucio-eic-mcp-server" style="color:#2f6f8f;text-decoration:underline;"><code>rucio-eic-mcp-server</code></a> — DIDs, replicas, replication rules
+<a href="https://github.com/eic/rucio-eic-mcp-server" style="color:#2f6f8f;text-decoration:underline;"><code>rucio-eic-mcp-server</code></a> — Data Identifiers, replicas, replication rules
 </div>
 
 <div style="background:#f3eef8;border-left:4px solid #7B3FA0;border-radius:4px;padding:6px 10px;flex:1;">
@@ -537,14 +525,14 @@ Production orchestration will be consolidated around **BNL PanDA/iDDS** and **JL
   "Summarize failed jobs on Perlmutter in the month of April and specify the most dominant error"
 </div>
 <div class="figure">
-  <img src="assets/example-agent-response.jpg" alt="AI chatbot response on Mattermost" style="max-height:195px;width:100%;object-fit:contain;border-radius:6px;border:1px solid #c0cdd8;image-rendering:crisp-edges;">
+  <img src="assets/example-agent-response.jpg" alt="AI chatbot response on Mattermost" style="height:195px;width:100%;object-fit:cover;object-position:center 20%;border-radius:6px;border:1px solid #c0cdd8;">
 </div>
 
 <div style="background:#f0f5f9;border-left:4px solid #7B3FA0;border-radius:6px;padding:7px 14px;font-size:17px;font-style:italic;color:#1f2933;">
   "List what's available under the /volatile/eic/EPIC/EVGEN directory on JLab XRootD"
 </div>
 <div class="figure">
-  <img src="assets/example-xrootd-response.jpg" alt="AI chatbot XRootD response on Mattermost" style="max-height:195px;width:100%;object-fit:contain;border-radius:6px;border:1px solid #c0cdd8;image-rendering:crisp-edges;">
+  <img src="assets/example-xrootd-response.jpg" alt="AI chatbot XRootD response on Mattermost" style="height:195px;width:100%;object-fit:cover;object-position:center 20%;border-radius:6px;border:1px solid #c0cdd8;">
 </div>
 
 </div>
@@ -578,7 +566,7 @@ PCS follows a **user-centered design** — mapping collaboration requests to job
 <div>
 
 <div class="figure">
-  <img src="assets/image11_sharp.jpg" alt="PCS screenshot" style="max-height:420px;width:100%;object-fit:contain;border-radius:4px;border:1px solid #c0cdd8;image-rendering:crisp-edges;">
+  <img src="assets/image11_sharp.jpg" alt="PCS screenshot" style="max-height:320px;width:100%;object-fit:contain;border-radius:4px;border:1px solid #c0cdd8;image-rendering:crisp-edges;">
 </div>
 
 </div>
@@ -595,7 +583,7 @@ PCS follows a **user-centered design** — mapping collaboration requests to job
 
 ## PCS in Action: Example PanDA Task
 
-<p style="font-size:18px;background:#fdf6e3;border-left:4px solid #b07d00;padding:8px 14px;border-radius:4px;margin-bottom:10px;">PCS is inspired by the <strong><a href="https://cds.cern.ch/record/2649430" style="color:#b07d00;text-decoration:underline;">ATLAS Metadata Interface (AMI)</a></strong> — Odier et al., EPJ Web Conf. 214 (2019) 05046</p>
+<p style="font-size:18px;background:#fdf6e3;border-left:4px solid #b07d00;padding:8px 14px;border-radius:4px;margin-bottom:10px;">Dataset naming convention inspired by the <strong><a href="https://cds.cern.ch/record/2649430" style="color:#b07d00;text-decoration:underline;">ATLAS Metadata Interface (AMI)</a></strong> — Odier et al., EPJ Web Conf. 214 (2019) 05046</p>
 
 <div style="display:grid;grid-template-columns:0.75fr 1.25fr;gap:20px;align-items:start;">
 <div style="font-size:19px;">
@@ -654,7 +642,7 @@ Every reconstructed event is an overlay of signal and multiple background source
 <div style="color:#2f6f8f;font-weight:bold;">Signal (e.g. DIS)</div><div style="color:#2f6f8f;font-weight:bold;text-align:right;">500 kHz</div><div style="text-align:right;">-</div>
 </div>
 
-Synrad alone arrives **~26,554× per frame** relative to a 500 kHz signal in a 2 µs window. Re-simulating background signals per physics sample is prohibitively expensive.
+Re-simulating background signals per physics sample is prohibitively expensive.
 
 <div style="background:#eaf4ea;border-left:4px solid #1E8449;border-radius:4px;padding:8px 12px;font-size:19px;margin-top:6px;">
 <strong>Solution:</strong> simulate background pools once and merge statistically at the 2 µs frame level — one synrad campaign reused across <strong>all physics analyses</strong>. Processes tagged via <code>MCParticles.generatorStatus</code> for post-hoc separation.
@@ -703,7 +691,7 @@ Synrad alone arrives **~26,554× per frame** relative to a 500 kHz signal in a 2
 </div>
 <p class="muted" style="font-size:17px;margin-top:6px;font-weight:bold;text-align:center;">Merge before simulation (HepMC3) vs. after simulation (EDM4hep)</p>
 <div style="background:#f0f5f9;border-left:4px solid #2f6f8f;border-radius:4px;padding:10px 14px;font-size:18px;margin-top:8px;">
-Simulated background data with distinguishability through <code>generatorStatus</code> code offsets is relevant to streaming reconstruction algorithm development <span class="muted">(<a href="https://indico.cern.ch/event/1471803/contributions/6967323/" style="color:#5f6b7a;text-decoration:underline;">See Takuya Kumaoka's talk</a>)</span>
+Background mixed events are highly relevant to streaming reconstruction algorithm development <span class="muted">(<a href="https://indico.cern.ch/event/1471803/contributions/6967323/" style="color:#5f6b7a;text-decoration:underline;">See Takuya Kumaoka's talk</a>)</span>
 </div>
 
 </div>
@@ -722,22 +710,22 @@ Simulated background data with distinguishability through <code>generatorStatus<
 
 ### Infrastructure and Resource Evolution
 
-- Monthly simulation campaigns run on HTC and HPC resources — opportunistic sites via OSG and allocated domestic &amp; international sites — in preparation for the TDR
-- International resources from Canada, Italy, NERSC, JLab, BNL, and university HPC sites are being integrated into production
-- Storage at BNL and JLab is scaling with compute demand
+- Monthly simulation campaigns run on HTC and HPC resources in preparation for the TDR
+- Opportunistic sites via OSG and allocated domestic &amp; international sites
+- Storage is scaling with growing collaboration demand
 
 ### Workload and Data Management
 
 - PanDA WMS / iDDS enables automated production workflows and job brokerage
 - Rucio enables distributed data management, replication, and user data access
-- PCS records production configuration and provenance across campaigns
+- PCS maps user requests from Physics Working Groups to production tasks
 
 ### Payload Optimizations
 
 - Optimization of expensive background mixed simulations
 
 <div style="background:#eef4fb;border-left:5px solid #1E5BA8;border-radius:4px;padding:7px 12px;font-size:17px;margin-top:8px;">
-ePIC builds on Grid computing experience and lessons learnt from the LHC experiments — and contributes back to the community through our development efforts.
+ePIC builds on Grid computing experience and lessons learned from the NP &amp; HEP community and contributes back to the community with our development efforts.
 </div>
 
 ---
